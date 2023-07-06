@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Combining CSS Selectors</title>
+  <style>
+    
+h1,
+h2 {
+  color: blueviolet;
+}
+
+
+.box > p {
+  color: firebrick;
+}
+.nice{
+  color:red;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+p{
+  color:pink;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h1>To Do List</h1>
+  <h2>Monday</h2>
+  <div class="box">
+    <p class="done">Do these things today!</p>
+  <div class="nice">
+      <input type="checkbox">Meditation
+      <br><br>
+      <input type="checkbox">Excercise<br><br>
+      <input type="checkbox">Read<br><br>
+      <input type="checkbox">Wash Clothes<br><br>
+    </div>
+   
+  </div>
+
+  <footer>
+  <p>The best preparation for tomorrow is doing your best today!!</p>
+</footer>
+</body>
+
+</html>

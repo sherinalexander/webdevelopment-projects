@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length converter</title>
+</head>
+<body>
+   <h1>inches to cm</h1>
+   <div class="container">
+   <div id="wrapper">
+    <input type="number" id="inch-val" placeholder="length in inches">
+   </div>
+   <div id="box">
+    <button type="submit"id="btn" onclick= "convertor()"> convert in cm</button>
+   </div>
+<div id="result">
+</div>
+</div>
+<footer>
+
+</footer>
+<style>
+    body{
+        background-color: bisque;
+        height:100px;
+    }
+    h1{
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40x;
+        text-align: center;
+        margin-top: 20px;
+    }
+    #wrapper{
+        /* border:10px solid black; */
+        text-align: center;
+        margin:50px;
+        width:20px;
+        background-color: azure;
+    }
+    #box{
+        text-align: center;
+        /* border:10px solid green; */
+        margin:100px;
+       
+    }
+    #btn{
+        background-color: azure;
+    }
+    .container{
+        background-color: #FFFEC4;
+        border:5px solid #FFFEC4;
+        border-radius: 10%;
+        /* position: absolute; */
+        margin:450px;
+        margin-top: 10px;
+        height:500px;
+        width:25%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color:black;
+    }
+    #result{
+        text-align: center;
+        color:gold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:20px;
+    }
+</style>
+
+
+    <script>
+        function convertor(){
+    let inch_val=(Number(document.getElementById("inch-val").value))
+    let cm_val = inch_val*2.25
+    let result=document.getElementById("result")
+   result.innerHTML= "Hey! it is " +cm_val.toFixed(2)+ "cm"
+        }
+            </script>
+</body>
+
+</html>

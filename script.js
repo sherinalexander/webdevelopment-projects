@@ -1,42 +1,22 @@
- let button=document.getElementById('add');
- let todoList=document.getElementById('todolist');
- let input=document.getElementById('input');
-//local storage
+const display = document.getElementById('display');
 
- 
- let todos = [];
- window.onload = ()=>{
-  todos = JSON.parse(localStorage.getItem('todos'))||[]
-  todos.foreach(todo=>addtodo(todo))
-  
- }
+function appendToDisplay(input) {
+ display.value += input;
 
- button.addEventListener('click',()=>{
-   todos.push(input.value)
-   localStorage.setItem('todos',JSON.stringify(todos))
-   addtodo(input.value)
-   input.value=''
- })
- function addtodo(todo){
-    let para = document.createElement('p')
-    para.innerText = todo;
-    todoList.appendChild(para)
-    
-    para.addEventListener('click',()=>{
-        para.style.textDecoration = 'line-through'
-        remove(todo)
 
-    })
-    para.addEventListener('dblclick',()=>{
-        todoList.removeChild(para)
-        remove(todo)
+}
 
-    })
- }
 
-    function remove(todo){
-        let index = todos.indexOf(todo)
-        if(index>-1){
-        todos.splice(index,1);
-        }
-    }
+function clearDisplay() {
+    display.value = '';
+}
+
+function calculate() {  
+try{
+    display.value=eval(display.value);
+
+}
+catch(e){
+    display.value='Error';
+}
+}
